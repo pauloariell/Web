@@ -1,12 +1,44 @@
+body {
+  background-color: rgba(4, 4, 4, 0.8);
+}
+
 article{
-  width: 250px;
-  border: 2px solid hsl(120,100%,30%);
+  border: 1px solid hsl(20,10%,30%);
+  width: 100px;
   text-align: center;
-  padding: 12px;
+  padding: 20px;
   border-radius: 10px;
-  transition: 1s;
-  /*float: left;*/
-  display: inline-block;
+  transition: 3s;
+  display: inline-table;
+  /*display: table-cell;*/
+}
+
+img{
+  border-radius: 10px;
+  width:280px;
+  height:370px;
+
+}
+
+.vinganca img:hover{
+  -webkit-animation:fading 6s ;
+  /* fonte: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_animate_fading
+  ainda estou estudando o codigo para entender melhor o fading*/
+  /*animation:fading 1s infinite;*/
+}
+@-webkit-keyframes fading{
+  25%{opacity:0}
+  50%{opacity:1}
+  100%{opacity:1}
+}
+/*@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}*/
+
+span{
+  font-weight: bolder;
+}
+
+.comedia{
+  background: hsl(30,100%,50%);
 }
 
 .comedia:hover{
@@ -14,30 +46,52 @@ article{
   transform: rotate(180deg);
 }
 
-#um-morto-muito-louco-2 img{}
-
-#um-morto-muito-louco img{}
-
-
-
-.comedia{
-  background: hsl(30,100%,50%);
+.acao{
+  background: radial-gradient(circle, gray, black);
 }
-.acao {
-  background: hsl(100,10%,20%);
-}
-
 .acao:hover{
-  background: hsl(100,10%,20%);
-  border: 2px solid hsl(120,100%,50%);
-  padding: 10px;
-  /*margin-bottom: 8px;*/
-  background-color: #33b5e5;
-  color: #ffffff;
-  transform: rotate(45deg);
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 
-.grad1:hover {
-    background: radial-gradient(circle, black, red, black);
+#john-wick:hover{
+  background: radial-gradient(circle, darkred, black);
 }
+
+#john-wick-2:hover {
+  background: radial-gradient(circle, red, black, black);
+  color: red;
+}
+
+.serie:hover{
+  transform: rotate(360deg);
+  background: radial-gradient(circle, darkblue, darkblue, black, black);
+  color: pink;
+}
+
+.terror {}
+
+.aventura {
+  background: rgb(214, 214, 214)
+}
+
+.aventura:hover{
+  background: rgb(214, 214, 214);
+  font-family: serif;
+  ali
+}
+
+.drama {}
+
+.sombrio {}
+
+.mafia {}
+
+.real {}
+
+.historia {}
+
+.sinistro {}
+
+.nerd {}
+
+.vinganca{}

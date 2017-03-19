@@ -21,8 +21,6 @@ clodoaldo.filhos.push(julia);
 clodoaldo.filhos.push(maria);
 maria.filhos.push(chico);
 
-console.log(joao);
-
 function imprimir(){
   //nome, sobrenome, idade, qtdade de filhos
   var x = document.createElement("article");

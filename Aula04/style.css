@@ -8,3 +8,7 @@ div {
   text-align: center;
   position: fixed;
 }
+
+button {
+  position: relative;
+}

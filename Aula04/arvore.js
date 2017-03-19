@@ -27,4 +27,8 @@ function imprimir(){
   x.classList.add("pessoa");
   x.textContent = "Silvia Silva";
   document.body.appendChild(x);
+
+  var y = document.createElement("h1");
+  y.textContent = joao.nome;
+  x.appendChild(y);
 }

@@ -1,3 +1,4 @@
+var pessoas = [];
 
 function Pessoa(n,s,i){
   this.nome = n;
@@ -7,33 +8,48 @@ function Pessoa(n,s,i){
   this.crescer = function(){
     return ++this.idade;
   }
+  //pessoas.push(this);
 }
+
+/*Pessoa("Joao", "Patot", 30);  //verificar por que a push está dando errado.
+Pessoa("Maria Jose", "Patot", 15);
+Pessoa("Jose Maria", "Patot", 15);
+Pessoa("Joasimonson", "Patot Pereira", 1);
+Pessoa("Joacir", "Pereira", 25);
+Pessoa("Joana", "Almeida", 102);*/
+
+
 
 function imprimir(){
   //nome, sobrenome, idade, qtdade de filhos
-  var Art = document.createElement("article");
-  Art.classList.add("pessoa");
-  document.body.appendChild(Art);
+  for (i = 0; i < pessoas.length; i++) {
+    var Art = document.createElement("article");
+    Art.classList.add("pessoa");
+    document.body.appendChild(Art);
 
-  var Name = document.createElement("h4");
-  Name.textContent = joao.nome + " " + joao.sobrenome; //fazer um for para imprimir todaas pessoas
+    var Name = document.createElement("h4");
+    Name.textContent = "Nome:"+pessoas[i].nome + " " + pessoas[i].sobrenome; //fazer um for para imprimir todaas pessoas
 
 
-  var Age  = document.createElement("li"); //nao usar lista, usar <P> e SPAN
-  Age.textContent = joao.idade;
+    var Age  = document.createElement("p"); //nao usar lista, usar <P> e SPAN
+    Age.textContent = "Idade:"+pessoas[i].idade;
 
-  var Child  = document.createElement("li");
-  Child.textContent = joao.filhos.length;
+    var Child  = document.createElement("p");
+    Child.textContent = "Qtde Filhos:"+pessoas[i].filhos.length;
 
-  Art.appendChild(Name);
-  Art.appendChild(Age);
-  Art.appendChild(Child);
+    Art.appendChild(Name);
+    Art.appendChild(Age);
+    Art.appendChild(Child);
+  }
 }
 
-var joao = new Pessoa("João", "Patati", 98);
-var ze = new Pessoa("Zé", "Patati", 60);
+
+//pessoa[2].filho.push()
+
+var joao = new Pessoa("Joao", "Patati", 98);
+var ze = new Pessoa("Ze", "Patati", 60);
 var clodoaldo = new Pessoa("Clodoaldo", "Patati", 63);
-var julia = new Pessoa("Júlia", "Patati", 40);
+var julia = new Pessoa("Julia", "Patati", 40);
 var maria = new Pessoa("Maria", "Patati", 36);
 var chico = new Pessoa("Chico", "Patati", 10);
 
@@ -43,12 +59,10 @@ clodoaldo.filhos.push(julia);
 clodoaldo.filhos.push(maria);
 maria.filhos.push(chico);
 
-var pessoa = [];
-pessoa.push(joao);
-pessoa.push(ze);
-pessoa.push(clodoaldo);
-pessoa.push(julia);
-pessoa.push(maria);
-pessoa.push(chico);
 
-console.imprimir();
+pessoas.push(joao);
+pessoas.push(ze);
+pessoas.push(clodoaldo);
+pessoas.push(julia);
+pessoas.push(maria);
+pessoas.push(chico);

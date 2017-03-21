@@ -1,0 +1,13 @@
+body {
+  background: rgb(50, 50, 50);
+  color: red;
+}
+
+p{
+  font-size: 30px;
+}
+span{
+  display: inline-block;
+  margin-left: 10px;
+  color: blue;  
+}

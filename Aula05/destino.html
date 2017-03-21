@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulários</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var queryString = window.location.search;
+      var parametros = new URLSearchParams(queryString);
+      for(var i of parametros){
+        var p = document.createElement("p");
+        var span = document.createElement("span");
+        span.textContent = i[1];
+        p.textContent = i[0];
+        p.appendChild(span);
+        document.body.appendChild(p)
+      }
+    </script>
+  </body>
+</html>

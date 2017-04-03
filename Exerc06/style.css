@@ -1,0 +1,17 @@
+p {
+  color: red;
+  font-size: 100px;
+  border: 2px;
+}
+
+li button {
+  position: relative;
+}
+
+li button:before{
+  content: "X";
+}
+
+li {
+  width: 100px;
+}
